@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeSwift | Premium Typing Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blob blob-1"></div>
+    <div class="background-blob blob-2"></div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="logo">Type<span>Swift</span></h1>
+            <p class="subtitle">Elevate your typing mastery</p>
+        </header>
+
+        <section class="stats-container">
+            <div class="stat-card">
+                <span class="stat-label">WPM</span>
+                <span id="wpm" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">ACCURACY</span>
+                <span id="accuracy" class="stat-value">100%</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">TIME</span>
+                <span id="timer" class="stat-value">60s</span>
+            </div>
+        </section>
+
+        <section class="typing-container">
+            <div id="word-display" class="word-display">
+                <!-- Text will be injected here -->
+            </div>
+            <textarea id="typing-input" class="typing-input" placeholder="Start typing here..." autofocus></textarea>
+        </section>
+
+        <section id="mistakes-section" class="mistakes-section hidden">
+            <h3 class="section-title">Mistake Words</h3>
+            <div id="mistakes-list" class="mistakes-list"></div>
+        </section>
+
+        <footer class="footer">
+            <button id="reset-btn" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+                    <path d="M21 3v5h-5" />
+                    <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+                    <path d="M3 21v-5h5" />
+                </svg>
+                Restart Test
+            </button>
+            <div class="difficulty-selector">
+                <button class="diff-btn active" data-time="60">1m</button>
+                <button class="diff-btn" data-time="30">30s</button>
+                <button class="diff-btn" data-time="15">15s</button>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
